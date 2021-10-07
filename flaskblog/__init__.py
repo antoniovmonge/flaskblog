@@ -1,8 +1,29 @@
-from os.path import isfile
-from os.path import dirname
+import os
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager
+from flask_mail import Mail
+from dotenv import load_dotenv
 
-version_file = '{}/version.txt'.format(dirname(__file__))
+load_dotenv()
 
-if isfile(version_file):
-    with open(version_file) as version_file:
-        __version__ = version_file.read().strip()
+app = Flask(__name__)
+
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY_1')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
+db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+login_manager.login_message_category = 'info'
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')
+app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
+
+mail = Mail(app)
+
+from flaskblog import routes
