@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
-from flaskblog.config import Config
-from run import app
+from flaskblog import create_app
+
+app = create_app()
 
 db = SQLAlchemy(app)
 
