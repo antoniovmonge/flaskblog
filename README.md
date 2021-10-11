@@ -1,6 +1,9 @@
 # Flask Web Application
 
-Blog Posts
-User Authentication
+- Blog Post
+- User Authentication
+- Email Password recovery 
 
-Flask, SQLALchemy...
+Web Framework: Flask
+DB Management: SQLALchemy, SQLite (development), Heroku Postgres (Production)
+Frontend: HTML, CSS, Bootstrap 4.0
