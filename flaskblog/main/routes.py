@@ -15,3 +15,7 @@ def home():
 @main.route("/about/")
 def about():
     return render_template('about.html', title='About')
+
+@main.route("/coming_soon/")
+def coming_soon():
+    return render_template('coming_soon.html', title='Coming soon')

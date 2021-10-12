@@ -1,4 +1,24 @@
 {% extends "layout.html" %}
 {% block content %}
+<div class="content-section">
     <h1>About Page</h1>
+    <br>
+    <p>
+        <strong>Framework:</strong> This blog had been created using Flask.
+    </p>
+    <p>
+        <strong>User Authentication:</strong> Encrypted storage of email, username and password. The login page has a recovery function implemented, that sends to the user an email with an automatic generated temporary-token-link.<br>
+    </p>
+    <p>
+        <strong>Database:</strong> The Posts and Users tables are stored in the database as a service <strong>Heroku Postgres</strong>.
+    </p>
+    <p>
+        <strong>Cloud Hosting:</strong> This app is deployed to Heroku.
+    </p>
+    <p>
+        <strong>GitHub repository:</strong> <a href="https://github.com/antoniovmonge/flaskblog">github/antoniovmonge</a>
+    </p>
+
+</div>
+    
 {% endblock content %}
