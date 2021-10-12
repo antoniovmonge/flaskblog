@@ -31,6 +31,9 @@
         <meta property="twitter:title" content="Data World — The Python and Data Science community">
         <meta property="twitter:description" content="Find the latest content, share your knowledge, and be aware of the cutting-edge technology for data management.">
         <meta property="twitter:image" content="../static/dataworldbig.png">
+
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/65e3d93b99.js" crossorigin="anonymous"></script>
         
         {% if title %}
             <title>Data World - {{ title }}</title>
@@ -89,7 +92,7 @@
                         <br>
                         <!-- <p class='text-muted'>You can put any information here you'd like. -->
                         <ul class="list-group">
-                            <li class="list-group-item list-group-item-light sidebar-title" href="#"><a class="sidebar-title" href="#">Python</a></li>
+                            <li class="list-group-item list-group-item-light"><a class="sidebar-title" href="{{ url_for('main.coming_soon') }}">Python</a></li>
                             <li class="list-group-item list-group-item-light"><a class="sidebar-title" href="{{ url_for('main.coming_soon') }}">SQL</a></li>
                             <li class="list-group-item list-group-item-light"><a class="sidebar-title" href="{{ url_for('main.coming_soon') }}">Data Analysis</a></li>
                             <li class="list-group-item list-group-item-light"><a class="sidebar-title" href="{{ url_for('main.coming_soon') }}">Machine Learning</a></li>
@@ -100,8 +103,51 @@
                         </p>
                     </div>
                 </div>
+                
             </div>
         </main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="footer footer-dark">
+            <footer>
+                <div class="container">
+                    <!-- <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="#">Data Analysis</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Hosting</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3>Company Name</h3>
+                            <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                        </div>
+                    </div>
+                    <br> -->
+                    <div class="col item social">
+                        <a href="https://github.com/antoniovmonge"><i class="fab fa-github"></i></a>
+                        <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
+                    </div>
+                    <p class="copyright">Antonio V Monge © 2021</p>
+                </div>
+            </footer>
+        </div>
 
 
         <!-- Optional JavaScript -->
