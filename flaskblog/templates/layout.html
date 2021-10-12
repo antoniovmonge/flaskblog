@@ -12,7 +12,26 @@
         
         <!-- Favicon -->
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        
+        <!-- Primary Meta Tags -->
+        <title>Data World — The Python and Data Science community</title>
+        <meta name="title" content="Data World — The Python and Data Science community">
+        <meta name="description" content="Find the latest content, share your knowledge, and be aware of the cutting-edge technology for data management.">
 
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://metatags.io/">
+        <meta property="og:title" content="Data World — The Python and Data Science community">
+        <meta property="og:description" content="Find the latest content, share your knowledge, and be aware of the cutting-edge technology for data management.">
+        <meta property="og:image" content="../static/bigdataworld.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://metatags.io/">
+        <meta property="twitter:title" content="Data World — The Python and Data Science community">
+        <meta property="twitter:description" content="Find the latest content, share your knowledge, and be aware of the cutting-edge technology for data management.">
+        <meta property="twitter:image" content="../static/bigdataworld.png">
+        
         {% if title %}
             <title>Data World - {{ title }}</title>
         {% else %}
